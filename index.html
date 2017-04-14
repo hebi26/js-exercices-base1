@@ -6,36 +6,21 @@
     </head>
     <body>
 
-      <audio id="Psycho" preload="auto" src="./Talking Heads - Psycho Killer Remastered Hq.mp3"></audio>
-      <audio id="Schubert" preload="auto" src="./SchubertMoments MusicalN3.mp3"/></audio>
+      <span id="lecteur"></span>
+      <!-- <audio id="Psycho" preload="auto" src="./Talking Heads - Psycho Killer Remastered Hq.mp3"></audio>
+      <audio id="Schubert" preload="auto" src="./SchubertMoments MusicalN3.mp3"/></audio> -->
 
       <label for="nom">Quel est votre nom</label><br>
       <input id="nom" type="txt" value="" required/><br>
       <label for="age">Quel est votre age</label><br>
-      <input id="age" type="txt" value="" required/><br>
-      <button onclick="Confirm_form();">Confirm</button>
+      <input id="age" type="number" min="1" max="99" value="" required/><br>
+      <button id="bouton">Confirm</button>
 
 
 <p id="reponse"></p>
 
-<script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="jquery.js"></script>
 
-function Confirm_form(){
-
-var Name = document.getElementById("nom").value;
-var Age = document.getElementById("age").value;
-var texte = ("bonjour " + Name + "!");
-
-document.getElementById("reponse").innerHTML = texte;
-if (Age < 18){
-  player = document.getElementById("Schubert");
-}
-else{
-  player = document.getElementById("Psycho");
-}
-player.play();
-}
-
-</script>
   </body>
 </html>
